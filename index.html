@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Rainbow text!</title>
+	<style>
+		.wrapper {
+			width: 800px;
+			display: block;
+			margin: 0 auto;
+		}
+		.center {
+			text-align: center;
+		}
+		#textInput,
+		#textSubmit {
+			display: block;
+			margin: 0 auto;
+		}
+		#textInput {
+			width: 500px;
+			height: 300px;
+			margin-bottom: 20px;
+		}
+		#textSubmit {
+			    width: 130px;
+			    height: 40px;
+			    background-color: #00B0FF;
+			    border: none;
+			    border-radius: 5px;
+			    color: #fff;
+			    font-weight: bold;
+			    text-shadow: 0px 1px 0px #333;
+			    cursor: pointer;
+
+		}
+		.rainbow {
+			font-size: 1em;
+			height: 200px;
+			overflow-y: scroll;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<h1 class="center">
+			<span style="color: rgb(131,86,103)">R</span><span style="color: rgb(195,161,178)">a</span><span style="color: rgb(20,88,207)">i</span><span style="color: rgb(168,48,98)">n</span><span style="color: rgb(149,54,205)">b</span><span style="color: rgb(139,189,144)">o</span><span style="color: rgb(15,62,220)">w</span><span style="color: rgb(154,135,238)"> </span><span style="color: rgb(180,184,191)">t</span><span style="color: rgb(64,206,3)">e</span><span style="color: rgb(207,192,35)">x</span><span style="color: rgb(71,35,98)">t</span>
+		</h1>
+		<textarea id="textInput" placeholder="Paste your text here"></textarea>
+		<input type="button" id="textSubmit" value="RAINBOW!">
+		<h3 class="center">Your rainbowed text</h3>
+		<p id="output" class="rainbow"></p>
+		<h3 class="center">Code for your rainbowed text</h3>
+		<p id="codeOutput"></p>
+	</div>
+	<script src="js/jquery.js"></script>
+	<script>
+		$(document).ready(function () {
+
+			$("#textSubmit").click(function (){
+
+				$("#output").empty();
+				$("#codeOutput").empty();
+				
+				var inputText = $("#textInput").val();
+
+				for (var i = 0; i < inputText.length; i++) {
+					var r = Math.floor(Math.random() * 255) + 1;
+					var g = Math.floor(Math.random() * 255) + 1;
+					var b = Math.floor(Math.random() * 255) + 1;
+
+					$(".rainbow").append('<span style="color: rgb(' + r + "," + g + "," + b + ')">' + inputText[i] + '</span>');
+				};
+
+				var codeText = $("#output").html();
+				$("#codeOutput").append('<textarea style=" display: block; width: 500px; height: 300px; margin: 0 auto;">' + codeText + '</textarea>');
+
+			});
+
+		});
+	</script>
+</body>
+</html>
