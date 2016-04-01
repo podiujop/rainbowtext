@@ -15,8 +15,8 @@ $(document).ready(function () {
 			$(".rainbow").append('<span style="color: rgb(' + r + "," + g + "," + b + ')">' + inputText[i] + '</span>');
 		};
 
-		var codeText = $("#output").html();
-		$("#codeOutput").append('<textarea style=" display: block; width: 100%; height: 300px; margin: 0 auto;">' + codeText + '</textarea>');
+		var codeText = $("#textOutput").html();
+		$("#codeOutput").val(codeText);
 
 	});
 

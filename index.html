@@ -8,7 +8,7 @@
 <body>
 	<header class="header">
 			<h1 class="center">
-				<a class="header__home-link" href="/"><span style="color: rgb(6,223,123)">R</span><span style="color: rgb(240,13,59)">a</span><span style="color: rgb(90,170,4)">i</span><span style="color: rgb(194,167,234)">n</span><span style="color: rgb(248,108,239)">b</span><span style="color: rgb(230,255,52)">o</span><span style="color: rgb(247,70,205)">w</span><span style="color: rgb(244,19,231)"> </span><span style="color: rgb(135,143,157)">t</span><span style="color: rgb(179,179,241)">e</span><span style="color: rgb(98,86,223)">x</span><span style="color: rgb(78,102,164)">t</span></a>
+				<a class="header__home-link" href="/"><span style="color: rgb(6,223,123)">R</span><span style="color: rgb(240,13,59)">a</span><span style="color: rgb(90,170,4)">i</span><span style="color: rgb(194,167,234)">n</span><span style="color: rgb(248,108,239)">b</span><span style="color: rgb(230,255,52)">o</span><span style="color: rgb(247,70,205)">w</span><span style="color: rgb(244,19,231)"> </span><span style="color: rgb(135,143,157)">t</span><span style="color: rgb(179,179,241)">e</span><span style="color: rgb(98,86,223)">x</span><span style="color: rgb(78,102,164)">t</span><span>&nbsp;</span><span style="color: rgb(209,228,10)">g</span><span style="color: rgb(95,12,92)">e</span><span style="color: rgb(185,83,83)">n</span><span style="color: rgb(206,89,107)">e</span><span style="color: rgb(69,216,124)">r</span><span style="color: rgb(235,170,95)">a</span><span style="color: rgb(56,237,2)">t</span><span style="color: rgb(80,248,240)">o</span><span style="color: rgb(209,137,39)">r</span></a>
 			</h1>
 	</header>
 	<div class="wrapper clearfix">
@@ -19,16 +19,38 @@
 		</div>
 		<div class="wrapper__main wrapper__main-block2">
 			<h3 class="center">Your rainbowed text</h3>
-			<p id="output" class="rainbow"></p>
+			<p id="textOutput" class="rainbow"></p>
 		</div>
 		<div class="wrapper__main wrapper__main-block3">
 			<h3 class="center">Code for your rainbowed text</h3>
-			<p id="codeOutput"></p>
+			<textarea name="" id="codeOutput"></textarea>
+			<!-- <p id="codeOutput"></p> -->
 		</div>
-		<footer></footer>
+		
 	</div>
-
 	<script src="js/jquery.js"></script>
 	<script src="js/app.js"></script>
+	<script>
+			$(document).ready(function () {
+				xRes = $( window ).width();
+				zRes = $( window ).height();
+
+				$(".header").css("height", zRes * 0.1);
+				$(".wrapper").css("height", zRes * 0.9);
+
+			});
+
+				$(window).resize(function(){
+					
+					xRes = $( window).width();
+					zRes = $( window).height();
+
+					var mainSize = zRes * 0.9;
+
+					$(".main").css("height", mainSize);
+					$(".header").css("height", zRes - mainSize);
+
+			});
+	</script>
 </body>
 </html>
