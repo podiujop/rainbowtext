@@ -75,7 +75,7 @@ h3 {
 .wrapper__main {
     width: 33%;
     float: left;
-    padding-top: 1em;
+    padding-top: 2em;
     height: 100%;
 }
 
@@ -103,9 +103,9 @@ h3 {
 #textOutput,
 #codeOutput {
     width: 80%;
-    height: 17em;
+    height: 25em;
     border: none;
-    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 8px;
 }
 
@@ -130,7 +130,7 @@ h3 {
 #textOutput {
 	width: 80%;
     font-size: 1em;
-    height: 17em;
+    height: 25em;
     word-wrap: break-word;
     overflow-y: auto;
 }
