@@ -127,8 +127,12 @@ h3 {
     cursor: pointer;
 }
 
+#textSubmit:hover {
+    background-color: #4C95B5;
+}
+
 #textOutput {
-	width: 80%;
+    width: 80%;
     font-size: 1em;
     height: 25em;
     word-wrap: break-word;
