@@ -127,6 +127,10 @@ h3 {
     cursor: pointer;
 }
 
+#textSubmit:hover {
+    background-color: #4C95B5;
+}
+
 #textOutput {
 	width: 80%;
     font-size: 1em;
